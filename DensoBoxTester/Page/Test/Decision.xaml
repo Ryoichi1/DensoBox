@@ -1,0 +1,37 @@
+﻿<Page
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="DensoBoxTester.Decision"
+	xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	x:Name="Page"
+	WindowTitle="Page"
+	FlowDirection="LeftToRight"
+	Height="460" Width="770" Loaded="Page_Loaded">
+
+    <Canvas>
+        <Canvas.Resources>
+            <Style TargetType="Label">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Padding" Value="0,0,0,0"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="#FF04FFF4" BlurRadius="20" ShadowDepth="0" Direction="0"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Canvas.Resources>
+        <Canvas x:Name="stackPanelErrInfo" Canvas.Top="327" Visibility="{Binding ErrInfoVisibility}" RenderTransformOrigin="0.5,0.5" Height="123" Width="676" Canvas.Left="84">
+            <Label x:Name="labelエラー情報" FontSize="28" FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Foreground="White" VerticalContentAlignment="Center" Effect="{Binding ColorDecision}" Height="40" Width="676" Padding="0" Content="{Binding FailInfo}"/>
+            <Label x:Name="label規格値" FontSize="28" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" Effect="{Binding ColorDecision}" Height="39" Width="676" Canvas.Top="40" Padding="0" Content="{Binding Spec}" />
+            <Label x:Name="label計測値" FontSize="28" FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Foreground="White" VerticalContentAlignment="Center" Effect="{Binding ColorDecision}" Height="44" Width="676" Canvas.Top="79" Padding="0" Content="{Binding MeasValue}" />
+        </Canvas>
+        <Label x:Name="label判定" Height="190" Width="466" FontSize="170" FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Foreground="{Binding ColorDecision}" Effect="{Binding EffectDecision}" Margin="0" HorizontalAlignment="Center" Canvas.Left="168" Background="{x:Null}" VerticalAlignment="Center" Canvas.Top="44" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Meiryo UI" Content="{Binding Decision}">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.8"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+    </Canvas>
+</Page>

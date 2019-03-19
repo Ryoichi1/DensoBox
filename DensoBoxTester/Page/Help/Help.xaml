@@ -1,0 +1,21 @@
+﻿<Page
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="DensoBoxTester.VerInfo"
+	x:Name="Page"
+	WindowTitle="Page"
+	FlowDirection="LeftToRight"
+	Width="1060" Height="719.475" Loaded="Page_Loaded">
+
+    <Canvas>
+        <Canvas.Effect>
+            <DropShadowEffect Color="#FF41BDEC" BlurRadius="30" Direction="0" ShadowDepth="0"/>
+        </Canvas.Effect>
+        <TextBlock x:Name="tbAssemblyVer" TextWrapping="Wrap" Text="アセンブリVer 1.50" FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="124" Canvas.Left="15" FontFamily="Meiryo UI"/>
+        <TextBlock TextWrapping="Wrap" Text="電装ボックス　検査システム" FontSize="40" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="10" Canvas.Left="15" FontFamily="Meiryo UI"/>
+        <TextBlock x:Name="tbParameterVer" TextWrapping="Wrap" Text="パラメータファイルVer 3.0" FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0" Canvas.Top="92" Canvas.Left="15" FontFamily="Meiryo UI"/>
+        <TextBlock TextWrapping="Wrap" 
+		Text="警告:この製品は、著作権に関する法律により保護されています。&#10; この製品の全部または一部を無断で複製したり、無断で複製物を頒布すると、&#10;著作権の侵害になりますのでご注意ください。" Foreground="White" FontSize="16" Canvas.Left="15" Canvas.Top="167" Height="93"/>
+        <Image Source="/DensoBoxTester;component/Azbil_logo.png" HorizontalAlignment="Left" Width="344" Height="114" Canvas.Top="258" Canvas.Left="15"/>
+    </Canvas>
+</Page>
