@@ -45,7 +45,10 @@ namespace DensoBoxTester
 
         public static Uri uriOtherInfoPage { get; set; }
 
-        public static double VolAc24v { get; set; }
+        public static double VolAc24v_1 { get; set; }
+        public static double VolAc24v_2 { get; set; }
+        public static double VolAc24vOff_1 { get; set; }
+        public static double VolAc24vOff_2 { get; set; }
 
         //リトライ履歴保存用リスト
         public static List<string> RetryLogList = new List<string>();

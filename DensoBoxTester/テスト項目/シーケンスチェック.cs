@@ -206,14 +206,14 @@ namespace DensoBoxTester.TestItems
                     SetRL3(true);
                     SetK3(false);
                     Sleep(1000);
-                    State.VolAc24v = MeasAc24vR100();
-                    return (Min < State.VolAc24v && State.VolAc24v < Max);
+                    State.VolAc24v_1 = MeasAc24vR100();
+                    return (Min < State.VolAc24v_1 && State.VolAc24v_1 < Max);
 
                 }
                 finally
                 {
                     State.VmTestStatus.Spec = $"規格値： AC{Min.ToString("F1")}V ～ AC{Max.ToString("F1")}V";
-                    State.VmTestStatus.MeasValue = $"計測値： AC{State.VolAc24v.ToString("F1")}V";
+                    State.VmTestStatus.MeasValue = $"計測値： AC{State.VolAc24v_1.ToString("F1")}V";
                 }
             });
         }
@@ -234,14 +234,14 @@ namespace DensoBoxTester.TestItems
                     SetRL2(true);
                     SetK3(true);
                     Sleep(1000);
-                    State.VolAc24v = MeasAc24vR100();
-                    return (Min < State.VolAc24v && State.VolAc24v < Max);
+                    State.VolAc24v_2 = MeasAc24vR100();
+                    return (Min < State.VolAc24v_2 && State.VolAc24v_2 < Max);
 
                 }
                 finally
                 {
                     State.VmTestStatus.Spec = $"規格値： AC{Min.ToString("F1")}V ～ AC{Max.ToString("F1")}V";
-                    State.VmTestStatus.MeasValue = $"計測値： AC{State.VolAc24v.ToString("F2")}V";
+                    State.VmTestStatus.MeasValue = $"計測値： AC{State.VolAc24v_2.ToString("F2")}V";
                 }
             });
         }
@@ -260,14 +260,14 @@ namespace DensoBoxTester.TestItems
                     SetRL3(false);
                     SetK3(false);
                     Sleep(1000);
-                    State.VolAc24v = MeasAc24vR10();
-                    return (State.VolAc24v < Max);
+                    State.VolAc24vOff_1 = MeasAc24vR10();
+                    return (State.VolAc24vOff_1 < Max);
 
                 }
                 finally
                 {
                     State.VmTestStatus.Spec = $"規格値： AC{Max.ToString("F1")}V以下";
-                    State.VmTestStatus.MeasValue = $"計測値： AC{State.VolAc24v.ToString("F1")}V";
+                    State.VmTestStatus.MeasValue = $"計測値： AC{State.VolAc24vOff_1.ToString("F1")}V";
 
                 }
             });
@@ -287,14 +287,14 @@ namespace DensoBoxTester.TestItems
                     SetRL2(false);
                     SetK3(true);
                     Sleep(1000);
-                    State.VolAc24v = MeasAc24vR10();
-                    return (State.VolAc24v < Max);
+                    State.VolAc24vOff_2 = MeasAc24vR10();
+                    return (State.VolAc24vOff_2 < Max);
 
                 }
                 finally
                 {
                     State.VmTestStatus.Spec = $"規格値： AC{Max.ToString("F1")}V以下";
-                    State.VmTestStatus.MeasValue = $"計測値： AC{State.VolAc24v.ToString("F1")}V";
+                    State.VmTestStatus.MeasValue = $"計測値： AC{State.VolAc24vOff_2.ToString("F1")}V";
                 }
             });
         }

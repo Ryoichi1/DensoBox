@@ -28,8 +28,10 @@ namespace DensoBoxTester
                 System.DateTime.Now.ToString("yyyy年MM月dd日(ddd) HH：mm：ss"),
                 State.VmMainWindow.Operator,
                 State.VmMainWindow.Opecode,
-                State.VmTestStatus.Dc,
-                State.VolAc24v.ToString()
+                $"AC{State.VolAc24v_1.ToString("F1")}V",
+                $"AC{State.VolAc24v_2.ToString("F1")}V",
+                $"AC{State.VolAc24vOff_1.ToString("F1")}V",
+                $"AC{State.VolAc24vOff_2.ToString("F1")}V",
             };
 
             return ListData;
